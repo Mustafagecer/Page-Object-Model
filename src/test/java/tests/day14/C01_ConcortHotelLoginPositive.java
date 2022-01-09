@@ -32,7 +32,7 @@ public class C01_ConcortHotelLoginPositive extends TestBase {
         concortHotel.userName.sendKeys("manager1");
         concortHotel.password.sendKeys("Manager1!"+ Keys.ENTER);
 
-        Assert.assertTrue(concortHotel.basarisizKayit.isEnabled(),"isim kaydedilemedi");
+        Assert.assertTrue(concortHotel.basarisizKayit.isEnabled(),"isim kaydedildi");
     }
 
 }
