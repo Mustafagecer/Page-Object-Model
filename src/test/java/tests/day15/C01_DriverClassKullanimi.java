@@ -6,7 +6,7 @@ import utilities.Driver;
 
 public class C01_DriverClassKullanimi {
     @Test
-    public void test(){
+    public void test() throws InterruptedException {
         Driver.getDriver();
 
         Driver.getDriver().get(ConfigReader.getProperty("AmazonUrl"));

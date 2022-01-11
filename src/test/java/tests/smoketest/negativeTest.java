@@ -38,7 +38,7 @@ public class negativeTest {
     }
     //				- yanlisSifreKullanici
     @Test(dependsOnMethods = "yanlisSifreIle")
-    public void yanlisSifreKullaniciIle(){
+    public void yanlisSifreKullaniciIle() throws InterruptedException {
 
         qaConcortPage=new QAConcortPage();
         qaConcortPage.usernameKutusu.clear();
