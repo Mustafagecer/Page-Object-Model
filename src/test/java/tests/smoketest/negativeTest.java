@@ -13,7 +13,7 @@ public class negativeTest {
     //				- yanlisSifre
     QAConcortPage qaConcortPage;
 
-    @Test (priority = -5)
+    @Test (priority = -5,groups = "birinciGrup")
     public void yanlisSifreIle(){
         Driver.getDriver().get(ConfigReader.getProperty("CHQAUrl"));
         qaConcortPage=new QAConcortPage();
@@ -37,7 +37,7 @@ public class negativeTest {
 
     }
     //				- yanlisSifreKullanici
-    @Test(dependsOnMethods = "yanlisSifreIle")
+    @Test(dependsOnMethods = "yanlisSifreIle",groups = "birinciGrup")
     public void yanlisSifreKullaniciIle() throws InterruptedException {
 
         qaConcortPage=new QAConcortPage();

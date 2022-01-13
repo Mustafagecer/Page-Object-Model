@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="class calistirma">
+    <test name="farkli classlari calistirma">
+        <classes>
+            <class name="tests.smoketest.positiveLoginTest"></class>
+            <class name="tests.day14_POM.C01_ConcortHotelLoginPositive"></class>
+            <class name="tests.day13_POM.C04_Amazon"></class>
+        </classes>
+        
+        
+    </test>
+
+    
+    
+</suite>

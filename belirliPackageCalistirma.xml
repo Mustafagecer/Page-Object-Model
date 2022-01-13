@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="package calistirma">
+  <test name="package calistirma">
+      <packages>
+          <package name="tests.day14_POM"></package>
+      </packages>
+  </test>
+</suite>

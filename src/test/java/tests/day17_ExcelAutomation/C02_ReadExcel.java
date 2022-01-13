@@ -90,7 +90,7 @@ public class C02_ReadExcel {
     }
 
 
-    @Test
+    @Test(groups = "birinciGrup")
     public void test3() throws IOException {
         // tablodaki 2.sutunu bir liste olarak yazdirin
         List<String> ikinciSutun = new ArrayList<>();

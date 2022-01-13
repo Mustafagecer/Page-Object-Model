@@ -3,7 +3,12 @@
 
     <test name="satis fonksiyonlari testi">
         <classes>
-            <class name=""></class>
+            <class name="tests.smoketest.negativeTest">
+                
+                <methods>
+                    <exclude name="yanlisKulllaniciIlen "></exclude>
+                </methods>
+            </class>
             
             
         </classes>
