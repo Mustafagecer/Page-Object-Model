@@ -2,10 +2,7 @@ package utilities;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +11,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+import java.util.Random;
 import java.util.function.Function;
 
 public class ReusableMethods {
@@ -137,5 +134,42 @@ public class ReusableMethods {
         });
         return element;
     }
+    /**
+     * Performs double click action on an element
+     * @param element
+     */
+    public static void doubleClick(WebElement element) {
+        new Actions(Driver.getDriver()).doubleClick(element).build().perform();
+    }
+
+    /**
+     * @param element
+     * @param check
+     */
+    public static void selectCheckBox(WebElement element, boolean check) {
+        if (check) {
+            if (!element.isSelected()) {
+                element.click();
+            }
+        } else {
+            if (element.isSelected()) {
+                element.click();
+            }
+        }
+    }
+
+    /**
+     * Selects a random value from a dropdown list and returns the selected Web Element
+     * @param select
+     * @return
+     */
+    public static WebElement selectRandomTextFromDropdown(Select select) {
+        Random random = new Random();
+        List<WebElement> weblist = select.getOptions();
+        int optionIndex = 1 + random.nextInt(weblist.size() - 1);
+        select.selectByIndex(optionIndex);
+        return select.getFirstSelectedOption();
+    }
+
 
 }
